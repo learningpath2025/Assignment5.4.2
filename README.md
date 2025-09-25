@@ -13,4 +13,4 @@
 	- The matrix is :
 	- 1 2
 	- 3 4
-	- Addition of the right Diagonal elements is :5
+	- Addition of the right Diagonal elements is : 5
