@@ -7,12 +7,12 @@ namespace Assignment5._4._2
         public static void AddRightDiagonals(int[,] matrix)
         {
 
-            int n = matrix.GetLength(0); // Number of rows
+            int n = matrix.GetLength(0);
             
             int rightDiagonalSum = 0;
             for (int i = 0; i < n; i++)
             {
-                rightDiagonalSum += matrix[i, i]; // Elements where row index equals column index
+                rightDiagonalSum += matrix[i, i];
             }
 
             Console.WriteLine($"\nAddition of the right Diagonal elements is : {rightDiagonalSum}\n");
@@ -21,7 +21,7 @@ namespace Assignment5._4._2
         public static void AddLeftDiagonals(int[,] matrix)
         {
 
-            int n = matrix.GetLength(0); // Number of rows
+            int n = matrix.GetLength(0);
             
             int leftDiagonalSum = 0;
             for (int i = 0; i < n; i++)
