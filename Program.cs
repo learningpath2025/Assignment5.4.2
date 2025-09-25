@@ -4,20 +4,6 @@ namespace Assignment5._4._2
 {
     internal class Program
     {
-        public static void AddRightDiagonals(int[,] matrix)
-        {
-
-            int n = matrix.GetLength(0);
-            
-            int rightDiagonalSum = 0;
-            for (int i = 0; i < n; i++)
-            {
-                rightDiagonalSum += matrix[i, i];
-            }
-
-            Console.WriteLine($"\nAddition of the right Diagonal elements is : {rightDiagonalSum}\n");
-        }
-
         public static void AddLeftDiagonals(int[,] matrix)
         {
 
@@ -26,17 +12,31 @@ namespace Assignment5._4._2
             int leftDiagonalSum = 0;
             for (int i = 0; i < n; i++)
             {
+                leftDiagonalSum += matrix[i, i];
+            }
+
+            Console.WriteLine($"\nAddition of the right Diagonal elements is : {leftDiagonalSum}\n");
+        }
+
+        public static void AddRightDiagonals(int[,] matrix)
+        {
+
+            int n = matrix.GetLength(0);
+            
+            int rightDiagonalSum = 0;
+            for (int i = 0; i < n; i++)
+            {
                 for(int j = n - 1; j >= 0; j--)
                 {
                     if(i + j == n - 1)
                     {
-                        leftDiagonalSum += matrix[i, j];
+                        rightDiagonalSum += matrix[i, j];
                         break;
                     }
                 }
             }
 
-            Console.WriteLine($"\nAddition of the left Diagonal elements is : {leftDiagonalSum}\n");
+            Console.WriteLine($"\nAddition of the left Diagonal elements is : {rightDiagonalSum}\n");
         }
 
         public static int[,] GetSquareMatrix()
